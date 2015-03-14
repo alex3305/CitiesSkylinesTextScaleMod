@@ -36,7 +36,7 @@
         void AddScalingOption() {
             AddLabel();
             this.statusLabel = AddStatus();
-            this.plusButton = AddButton("+", PlusButtonName, new Vector3(600, 195));
+            this.plusButton = AddButton("+", PlusButtonName, new Vector3(620, 195));
             this.minusButton = AddButton("-", MinusButtonName, new Vector3(500, 195));
 
             this.plusButton.eventClick += plusEvent;
@@ -92,9 +92,9 @@
 
             label.absolutePosition = new Vector3(550, 198);
             label.textAlignment = UIHorizontalAlignment.Center;
-            label.width = 60;
+            label.width = 80;
             label.height = 30;
-            label.text = ModInfo.Configuration.Scale.ToString("N1");
+            label.text = (ModInfo.Configuration.Scale * 100).ToString("N0") + "%";
             label.textScale = 1.3f;
             label.textColor = new Color32(255, 255, 255, 255);
 
@@ -121,13 +121,13 @@
 
         void minusEvent(UIComponent component, UIMouseEventParameter eventParam) {
             ModInfo.Configuration.DecreaseScale();
-            statusLabel.text = ModInfo.Configuration.Scale.ToString("N1");
+            statusLabel.text = (ModInfo.Configuration.Scale * 100).ToString("N0") + "%";
             statusLabel.Invalidate();
         }
 
         void plusEvent(UIComponent component, UIMouseEventParameter eventParam) {
             ModInfo.Configuration.IncreaseScale();
-            statusLabel.text = ModInfo.Configuration.Scale.ToString("N1");
+            statusLabel.text = (ModInfo.Configuration.Scale * 100).ToString("N0") + "%";
             statusLabel.Invalidate();
         }
 

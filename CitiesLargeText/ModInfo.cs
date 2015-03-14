@@ -20,7 +20,7 @@
         }
 
         public string Description {
-            get { return "Makes the text readable for human beings on small screens."; }
+            get { return "Enables text scaling ingame."; }
         }
 
         public static ScalingConfiguration Configuration { get; private set; }

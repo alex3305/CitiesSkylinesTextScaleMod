@@ -14,12 +14,12 @@
         public float Scale { get; private set; }
 
         public void IncreaseScale() {
-            Scale += .1f;
+            Scale += .01f;
             Serialize(ModInfo.configPath, this);
         }
 
         public void DecreaseScale() {
-            Scale -= .1f;
+            Scale -= .01f;
             Serialize(ModInfo.configPath, this);
         }
 

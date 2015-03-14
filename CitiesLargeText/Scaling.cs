@@ -15,7 +15,8 @@
             foreach (var label in GameObject.FindObjectsOfType<UILabel>()) {
                 if (label.textScale != ModInfo.Configuration.Scale) {
                     label.textScale = ModInfo.Configuration.Scale;
-                    label.PerformLayout();
+                    label.clipChildren = false;
+                    label.Invalidate();
                 }
             }
         }
