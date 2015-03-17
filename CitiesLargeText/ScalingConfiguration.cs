@@ -5,7 +5,7 @@
 
     public class ScalingConfiguration {
 
-        private static float initialScale = 1.0f;
+        private static float initialScale = 0.75f;
 
         public ScalingConfiguration() {
             Scale = initialScale;
